@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".CarStereo"
+    android:weightSum="1">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="20px" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Power"
+        android:id="@+id/button"
+        android:layout_gravity="center_vertical"
+        android:textColor="#ff3724ff" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyToggle"
+        android:id="@+id/toggleButton"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textOff="Power Off "
+        android:textOn="power On" />
+
+</RelativeLayout>
