@@ -1,16 +1,184 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
      tools:context=".CarStereo"
     android:weightSum="1"
-    android:background="#ff807f7f">
+    android:background="#ff807f7f"
+    android:orientation="vertical">
+
+
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="289dp"
-        android:background="#ffb6ff90"
-        android:id="@+id/linearLayout">
+        android:background="#ff445e34"
+        android:id="@+id/linearLayout"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:text="New ToggleButton"
+                android:id="@+id/power"
+                android:textOff="Power Off"
+                android:textOn="Power On"
+                android:layout_weight="3"
+                android:textSize="40sp"
+                android:textColor="#ffffffff"
+                android:background="#ff000000" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="#"
+                android:id="@+id/volume_indicator"
+                android:layout_weight=".5"
+                android:textSize="50sp"
+                android:textAlignment="gravity"
+                android:background="#ffdcdcdc" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="volume +"
+                android:id="@+id/volume_up"
+                android:layout_weight=".5"
+                android:textSize="30sp"
+                android:background="#ffffffff" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".25" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="volume -"
+                android:id="@+id/volume_down"
+                android:layout_weight=".5"
+                android:textSize="30sp"
+                android:background="#ffffffff" />
+
+            <Space
+                android:layout_width="50px"
+                android:layout_height="20px" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="50px" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.70" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="PRESET"
+                android:id="@+id/switch1"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                android:layout_weight="0.19" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="New ToggleButton"
+                android:id="@+id/toggleButton"
+                android:textOff="AM"
+                android:textOn="FM"
+                android:textSize="30sp"
+                android:layout_weight="0.10" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="80px"
+            android:layout_height="50px" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="50px"
+                android:layout_height="20px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="CD"
+                android:id="@+id/textView"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="0.57" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Tuner"
+                android:id="@+id/textView2"
+                android:textStyle="bold"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="301dp"
+                android:layout_height="33dp"
+                android:layout_weight="0.20"
+                android:background="#ff000000"></LinearLayout>
+
+            <Space
+                android:layout_width="159dp"
+                android:layout_height="20px" />
+
+            <SeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="80px"
+                android:id="@+id/seekBar"
+                android:layout_weight="0.77" />
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -20,6 +188,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout"
-        android:background="#ff74afff"></LinearLayout>
+        android:background="#ff2d3e5c">
 
-</RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
