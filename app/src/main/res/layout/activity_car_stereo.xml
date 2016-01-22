@@ -42,12 +42,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="#"
+                android:text="35"
                 android:id="@+id/volume_indicator"
-                android:layout_weight=".5"
                 android:textSize="50sp"
                 android:textAlignment="gravity"
                 android:background="#ffdcdcdc" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="0.22" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -96,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="PRESET"
-                android:id="@+id/switch1"
+                android:id="@+id/preset"
                 android:textColor="#ffffffff"
                 android:textSize="20sp"
                 android:layout_weight="0.19" />
@@ -105,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="New ToggleButton"
-                android:id="@+id/toggleButton"
+                android:id="@+id/amfm"
                 android:textOff="AM"
                 android:textOn="FM"
                 android:textSize="30sp"
@@ -136,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="CD"
-                android:id="@+id/textView"
+                android:id="@+id/cdtext"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -150,7 +154,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Tuner"
-                android:id="@+id/textView2"
+                android:id="@+id/tunertext"
                 android:textStyle="bold"
                 android:textSize="30sp" />
 
@@ -167,7 +171,16 @@
                 android:layout_width="301dp"
                 android:layout_height="33dp"
                 android:layout_weight="0.20"
-                android:background="#ff000000"></LinearLayout>
+                android:background="#ff000000">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="___________________________________________________"
+                    android:id="@+id/cdplayerslot"
+                    android:textSize="20sp"
+                    android:textColor="#ffffffff" />
+            </LinearLayout>
 
             <Space
                 android:layout_width="159dp"
@@ -176,7 +189,7 @@
             <SeekBar
                 android:layout_width="wrap_content"
                 android:layout_height="80px"
-                android:id="@+id/seekBar"
+                android:id="@+id/tunerseek"
                 android:layout_weight="0.77" />
         </LinearLayout>
 
@@ -190,6 +203,93 @@
         android:layout_below="@+id/linearLayout"
         android:background="#ff2d3e5c">
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="531dp"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_weight="0.07">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="New ToggleButton"
+                    android:id="@+id/playpause"
+                    android:layout_weight="0.06"
+                    android:textOn="Play"
+                    android:textOff="Pause"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="Stop"
+                    android:id="@+id/stop"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="Eject"
+                    android:id="@+id/eject"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:weightSum="1">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=">>"
+                    android:id="@+id/forward"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.12" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="Repeat"
+                    android:id="@+id/repeat"
+                    android:layout_weight="0.25" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="472dp"
+            android:layout_height="299dp"
+            android:background="#ffd2d2d2"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="200px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:00"
+                android:id="@+id/time"
+                android:textStyle="bold"
+                android:textSize="120sp"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
